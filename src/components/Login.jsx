@@ -1,11 +1,15 @@
 import axios from 'axios';
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { adduser } from '../utils/userSlice';
 
 const  Login = () => {
 
       const [email  , setEmail] = useState('');
       const [password , setPassword] =  useState('');
+
+      const dispatch = useDispatch();
       
       const navigate  =  useNavigate();
 
@@ -19,6 +23,8 @@ const  Login = () => {
 
             console.log("chal bhi rha hai ya nhi")
             console.log(data.data.user)
+
+            dispatch(adduser(data.data.user));
 
             navigate("/")
 

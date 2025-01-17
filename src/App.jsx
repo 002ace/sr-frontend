@@ -2,6 +2,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Body from "./components/Body"
 import Feed from "./components/Feed"
 import Login from "./components/Login"
+import { Provider } from "react-redux"
+import appStore from "./utils/appStore"
 function App() {
 
 
@@ -9,7 +11,7 @@ function App() {
      
        <div  className =""> 
           
-
+             <Provider   store={appStore}>
               <BrowserRouter   basename="/" >
 
 
@@ -25,6 +27,8 @@ function App() {
 
 
               </BrowserRouter>
+
+              </Provider>
          
 
 
