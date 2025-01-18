@@ -21,8 +21,7 @@ const  Login = () => {
           
                const data  =   await  axios.post("http://localhost:4000/api/login" ,{ email,password } , {withCredentials:true})
 
-            console.log("chal bhi rha hai ya nhi")
-            console.log(data.data.user)
+          
 
             dispatch(adduser(data.data.user));
 
@@ -44,8 +43,8 @@ const  Login = () => {
 
        
   const handleSubmit = (e) => {
-    e.preventDefault(); // Prevents the default form submission behavior
-    // Perform custom logic, e.g., validate, send data to server
+    e.preventDefault(); 
+   
     
   };
 
