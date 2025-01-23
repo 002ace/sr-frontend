@@ -12,13 +12,14 @@ const userSlice  =  createSlice({
          },
 
          removeUser:(state, action)=>{
-              return null
-         }
+            return null;
+         },
+        
       }
 
 })
 
 
-export const{adduser , removeUser} = userSlice.actions;
+export const{adduser , removeUser } = userSlice.actions;
 
-export default userSlice.reducer
+export default userSlice.reducer   

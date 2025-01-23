@@ -41,6 +41,9 @@ const Feed = () => {
        } , [])
 
 
+       if(feed === null)  return <h1>no feed found</h1>
+
+
 
 
 
